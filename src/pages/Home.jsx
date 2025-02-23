@@ -5,6 +5,9 @@ import Contact from "../components/ContactForm";
 import StudentReviews from "../components/Reviews";
 import Footer from "../components/Footer";
 import FAQ from "../components/FAQ";
+import DirectContactUs from "../components/DirectContact";
+import WhyChooseUs from "../components/Why";
+import Services from "../components/Services";
 
 
 
@@ -23,8 +26,11 @@ const Home = () => {
         <Navbar />
       </div>
       <EnlightComponent/>
+      <Services/>
+      <WhyChooseUs/>
     <StudentReviews/>
     <FAQ/>
+    <DirectContactUs/>
       <Contact/>
       <Footer/>
       {/* Main content section */}
