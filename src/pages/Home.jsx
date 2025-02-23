@@ -1,6 +1,10 @@
 import React, { useEffect } from "react";
 import Navbar from '../components/Navbar';
 import EnlightComponent from "../components/EnlightComponent";
+import Contact from "../components/ContactForm";
+import StudentReviews from "../components/Reviews";
+import Footer from "../components/Footer";
+import FAQ from "../components/FAQ";
 
 
 
@@ -19,6 +23,10 @@ const Home = () => {
         <Navbar />
       </div>
       <EnlightComponent/>
+    <StudentReviews/>
+    <FAQ/>
+      <Contact/>
+      <Footer/>
       {/* Main content section */}
       
     </div>

@@ -6,7 +6,7 @@ import { FiAlignJustify } from 'react-icons/fi';
 import logo from '../assets/logo.jpeg';
 import img1 from '../assets/facebook.png';
 import img2 from '../assets/googlemap.png';
-import img3 from '../assets/whatsapp.png';
+import img3 from '../assets/instagram.png';
 import img4 from '../assets/linkedin.png';
 
 const services = [
@@ -73,10 +73,16 @@ const Navbar = () => {
       
       {/* Social Media Icons */}
       <div className="hidden lg:flex gap-2">
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src={img1} alt="Facebook" className="h-[40px] w-[40px] object-contain" /></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src={img2} alt="Google Maps" className="h-[40px] w-[40px] object-contain" /></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src={img3} alt="WhatsApp" className="h-[40px] w-[40px] object-contain" /></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><img src={img4} alt="LinkedIn" className="h-[40px] w-[40px] object-contain" /></a>
+        <a href="https://www.facebook.com/share/16GUP3t2K6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+          <img src={img1} alt="Facebook" className="h-[40px] w-[40px] object-contain" />
+        </a>
+        <a href="https://www.google.com/maps/search/enlight+academy/@27.7032867,85.3186986,17z?entry=ttu&g_ep=EgoyMDI1MDIxOC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
+          <img src={img2} alt="Google Maps" className="h-[40px] w-[40px] object-contain" />
+        </a>
+        <a href="https://www.instagram.com/explore/locations/1337305383009807/enlight-academy/" target="_blank" rel="noopener noreferrer">
+          <img src={img3} alt="Instagram" className="h-[40px] w-[40px] object-contain" />
+        </a>
+       
       </div>
       
       {/* Mobile Menu Button */}
