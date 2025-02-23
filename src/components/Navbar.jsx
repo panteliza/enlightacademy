@@ -97,9 +97,14 @@ const Navbar = () => {
               {label}
             </Link>
           ))}
-          <div className="text-white py-2 border-b border-green-600 hover:bg-green-700 cursor-pointer" onClick={toggleDropdown}>
-            Services {showDropdown ? <AiOutlineUp /> : <AiOutlineDown />}
-          </div>
+        <div 
+  className="text-white py-2  border-b border-green-600 hover:bg-green-700 cursor-pointer flex items-center justify-between"
+  onClick={toggleDropdown}
+>
+  <span>Services</span>
+  {showDropdown ? <AiOutlineUp /> : <AiOutlineDown />}
+</div>
+
           {showDropdown && services.map(({ path, label }) => (
             <Link key={path} to={path} className="text-white py-2 border-b border-green-600 hover:bg-green-700" onClick={toggleSidebar}>
               {label}
