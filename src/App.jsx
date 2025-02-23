@@ -5,6 +5,8 @@ import './App.css'; // Add this for styling
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
+import AboutEnlight from './pages/AboutEnlight';
+import ContactPage from './pages/ContactPage';
 
 
 
@@ -17,6 +19,8 @@ const App = () => {
         <Routes>
         <Route path="/our-services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/about" element={<AboutEnlight />} />
+        <Route path="/contact" element={<ContactPage />} />
       
         
           <Route path="/" element={<Home />} />

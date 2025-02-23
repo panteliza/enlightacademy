@@ -82,13 +82,13 @@ const EnlightComponent = () => {
           {/* Highlighted Buttons */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-6">
             <Link
-              to="/about-us"
+              to="/about"
               className="relative flex items-center justify-center md:w-auto py-3 px-6 text-sm md:text-base rounded-full font-medium text-white border border-teal-400 highlight-border transition duration-300 focus:outline-none animate-on-scroll slide-from-bottom"
             >
               More About Us →
             </Link>
             <Link
-              to="/contact-us"
+              to="/contact"
               className="relative flex items-center justify-center md:w-auto py-3 px-6 text-sm md:text-base rounded-full font-medium text-white border border-teal-400 highlight-border transition duration-300 focus:outline-none animate-on-scroll slide-from-bottom"
             >
               Contact Us →
