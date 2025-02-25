@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import Gallery from './pages/Gallery';
 import AboutEnlight from './pages/AboutEnlight';
 import ContactPage from './pages/ContactPage';
+import ACLSBLSPage from './pages/ACLS';
 
 
 
@@ -21,6 +22,8 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutEnlight />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/acls-bls-training" element={<ACLSBLSPage />} />
+
       
         
           <Route path="/" element={<Home />} />
