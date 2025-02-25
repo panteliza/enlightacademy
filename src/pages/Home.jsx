@@ -25,6 +25,7 @@ const Home = () => {
       <div className="pt-[70px]">
         <Navbar />
       </div>
+      <div className="w-full flex-shrink-0 overflow-hidden">
       <EnlightComponent/>
       <Services/>
       <WhyChooseUs/>
@@ -33,8 +34,8 @@ const Home = () => {
     <DirectContactUs/>
       <Contact/>
       <Footer/>
-      {/* Main content section */}
-      
+    
+      </div>
     </div>
   );
 };
