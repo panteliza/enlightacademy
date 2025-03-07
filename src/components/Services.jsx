@@ -6,6 +6,21 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 // Import service images
+import one from "../assets/one.jpg";
+import two from "../assets/two.jpg";
+import three from "../assets/three.jpg";
+import four from "../assets/four.jpg";
+import five from "../assets/five.jpg";
+import six from "../assets/six.jpg";
+
+import seven from "../assets/seven.jpg";
+import eight from "../assets/eight.jpg";
+import nine from "../assets/nine.jpg";
+import ten from "../assets/ten.jpg";
+import eleven from "../assets/eleven.jpg";
+import twelve from "../assets/twelve.jpg";
+
+
 import service1 from "../assets/acls.jpg";
 import service2 from "../assets/ventilator.jpg";
 import service3 from "../assets/airway.jpg";
@@ -13,18 +28,20 @@ import service4 from "../assets/infection.jpg";
 import service5 from "../assets/waste.jpg";
 
 const services = [
-  { title: "Critical Care Nursing", image: service1, link: "/critical-care-nursing" },
-  { title: "Operation Theater Assistance", image: service2, link: "/operation-theater-assistance" },
-  { title: "Dialysis Assistance", image: service3, link: "/dialysis-assistance" },
-  { title: "AHA/Non-AHA BLS & ACLS", image: service4, link: "/aha-non-aha-bls-acls" },
-  { title: "Ventilator Workshop", image: service5, link: "/ventilator-workshop" },
-  { title: "First Aid and Emergency Management", image: service1, link: "/first-aid-emergency-management" },
-  { title: "Research and Data Analysis", image: service2, link: "/research-data-analysis" },
-  { title: "Infection Prevention and Control", image: service3, link: "/infection-prevention-control" },
-  { title: "CTEVT Affiliated Short Course", image: service4, link: "/ctevt-short-course" },
-  { title: "Caregiver", image: service5, link: "/caregiver" },
-  { title: "Fellowship Training on Regional Anesthesia & Pain Medicine", image: service1, link: "/regional-anesthesia-pain-medicine" },
-  { title: "Fellowship in Laparoscopic Training", image: service2, link: "/laparoscopic-training" },
+  { title: "Critical Care Nursing", image: one, link: "/critical-care-nursing" },
+  { title: "Operation Theater Assistance", image: two, link: "/operation-theater-assistance" },
+  { title: "Dialysis Assistance", image: three, link: "/dialysis-assistance" },
+  { title: "AHA/Non-AHA BLS & ACLS", image: four, link: "/aha-non-aha-bls-acls" },
+  { title: "First Aid and Emergency Management", image: five, link: "/first-aid-emergency-management" },
+  { title: "Ventilator Workshop", image: six, link: "/ventilator-workshop" },
+
+ 
+  { title: "Research and Data Analysis", image: seven, link: "/research-data-analysis" },
+  { title: "Infection Prevention and Control", image: eight, link: "/infection-prevention-control" },
+  { title: "CTEVT Affiliated Short Course", image: nine, link: "/ctevt-short-course" },
+  { title: "Caregiver", image: ten, link: "/caregiver" },
+  { title: "Fellowship Training on Regional Anesthesia & Pain Medicine", image: eleven, link: "/regional-anesthesia-pain-medicine" },
+  { title: "Fellowship in Laparoscopic Training", image: twelve, link: "/laparoscopic-training" },
 ];
 
 const Services = () => {
