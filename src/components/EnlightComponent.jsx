@@ -14,8 +14,10 @@ import enlight5 from "../assets/e.jpeg";
 const EnlightComponent = () => {
   useEffect(() => {
     const elements = document.querySelectorAll(".animate-on-scroll");
+
     elements.forEach((el) => {
-      el.classList.add("opacity-0");
+      el.classList.add("opacity-100"); // Ensure visibility on first load
+
       const observer = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
@@ -34,36 +36,51 @@ const EnlightComponent = () => {
       <style>{`
         .swiper-container {
           width: 100%;
-          min-height: auto; /* Prevent extra spacing */
+          min-height: auto;
         }
         .swiper-slide img {
           width: 100%;
-          height: 80vh; /* Increased height for visibility */
+          height: 75vh; /* Adjusted for visibility */
           object-fit: cover;
         }
         @media (max-width: 768px) {
           .swiper-slide img {
-            height: 55vh; /* Adjusted height for mobile */
+            height: 50vh; /* Adjusted height for mobile */
           }
         }
+        .text-container {
+          padding: 40px 20px;
+          text-align: center;
+          opacity: 100; /* Ensure visibility */
+        }
         .description-container {
-          margin-top: -10px; /* Pull text closer */
           padding: 20px;
           text-align: center;
+          margin-top: 20px; /* Ensuring proper spacing */
+        }
+        /* Animation Fix */
+        .opacity-100 {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+        .fade-in-animation {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+          transition: all 1s ease-in-out;
         }
       `}</style>
 
-      <div className="bg-[#018749] text-white py-4">
+      <div className="bg-[#018749] text-white py-6">
         {/* Hero Section */}
-        <div className="text-center py-12 px-4 md:px-12 lg:px-24">
+        <div className="text-container text-center px-4 md:px-12 lg:px-24 animate-on-scroll">
           
           {/* Welcome Heading */}
-          <h1 className="text-3xl md:text-5xl font-bold mb-6 font-professional animate-on-scroll">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             WELCOME TO ENLIGHT ACADEMY
           </h1>
 
           {/* Swiper Full-Screen Slider */}
-          <div className="swiper-container mx-auto py-6">
+          <div className="swiper-container mx-auto ">
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -81,15 +98,12 @@ const EnlightComponent = () => {
           </div>
 
           {/* Fixed: Description Below Slider */}
-          <div className="description-container">
-            <p className="text-sm md:text-lg text-gray-200 max-w-xl mx-auto mb-6 animate-on-scroll">
+          <div className="description-container animate-on-scroll">
+            <p className="text-sm md:text-lg text-gray-200 max-w-xl mx-auto">
               Enlight Academy specializes in ICU training programs for PCL, BNS, and BSc nurses, 
               equipping them with the necessary skills and knowledge to excel in critical care settings.
             </p>
           </div>
-
-          {/* Buttons */}
-         
         </div>
       </div>
     </>
