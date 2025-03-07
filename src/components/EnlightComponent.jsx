@@ -82,7 +82,7 @@ const EnlightComponent = () => {
 
           {/* Fixed: Description Below Slider */}
           <div className="description-container">
-            <p className="text-sm md:text-lg text-gray-200 max-w-xl mx-auto animate-on-scroll">
+            <p className="text-sm md:text-lg text-gray-200 max-w-xl mx-auto mb-6 animate-on-scroll">
               Enlight Academy specializes in ICU training programs for PCL, BNS, and BSc nurses, 
               equipping them with the necessary skills and knowledge to excel in critical care settings.
             </p>
