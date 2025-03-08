@@ -45,7 +45,7 @@ const Services = () => {
       className="pt-12 px-4 bg-gray-100"
     >
       <motion.h2
-        className="text-2xl md:text-3xl font-extrabold text-center text-[#038A58] mb-6"
+        className="text-2xl md:text-3xl font-extrabold text-center text-[#038A58] mb-8"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
