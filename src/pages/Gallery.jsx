@@ -21,11 +21,17 @@ import o15 from "../assets/o15.jpeg";
 import p16 from "../assets/p16.jpeg";
 import q17 from "../assets/q17.jpeg";
 import r18 from "../assets/r18.jpeg";
+import enlight1 from "../assets/a.jpeg";
+import enlight2 from "../assets/b.jpeg";
+import enlight3 from "../assets/c.jpeg";
+import enlight4 from "../assets/d.jpeg";
+import enlight5 from "../assets/e.jpeg";
+
 
 // Store images in an array
 const images = [
-  a1, b2, c3, d4, e5, f6, g7, h8, i9,
-  j10, k11, l12, m13, n14, o15, p16, q17, r18,
+  enlight1, enlight2,enlight3,enlight4,enlight5,a1, b2, c3, d4, f6, g7, h8, i9,
+  j10, k11, l12, m13, n14, o15, p16, q17, r18, 
 ];
 
 const GalleryContent = () => {
