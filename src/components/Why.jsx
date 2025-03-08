@@ -9,8 +9,8 @@ import imgA from "../assets/icu.png";
 import imgB from "../assets/b.jpeg";
 import imgC from "../assets/c.jpeg";
 import imgD from "../assets/d.jpeg";
-import imgE from "../assets/e.jpeg";
-import imgF from "../assets/e.jpeg";
+import imgE from "../assets/q17.jpeg";
+import imgF from "../assets/a.jpeg";
 
 const features = [
   {

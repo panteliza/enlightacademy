@@ -5,10 +5,10 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import enlight1 from "../assets/a.jpeg";
-import enlight2 from "../assets/b.jpeg";
+import enlight1 from "../assets/five.jpg";
+import enlight2 from "../assets/one.jpg";
 import enlight3 from "../assets/c.jpeg";
-import enlight4 from "../assets/d.jpeg";
+import enlight4 from "../assets/four.jpg";
 import enlight5 from "../assets/e.jpeg";
 
 const EnlightComponent = () => {
