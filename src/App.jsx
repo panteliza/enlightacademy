@@ -8,6 +8,7 @@ import Gallery from './pages/Gallery';
 import AboutEnlight from './pages/AboutEnlight';
 import ContactPage from './pages/ContactPage';
 import ACLSBLSPage from './pages/ACLS';
+import CriticalCareNursingPage from './pages/CriticalCareNursing';
 
 
 
@@ -22,7 +23,8 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutEnlight />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/acls-bls-training" element={<ACLSBLSPage />} />
+        <Route path="/aha-non-aha-bls-acls" element={<ACLSBLSPage />} />
+        <Route path="//critical-care-nursing" element={<CriticalCareNursingPage />} />
 
       
         
