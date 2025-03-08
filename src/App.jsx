@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import whatsappImage from './assets/whatsapp.png'; // Import WhatsApp image
 import './App.css'; // Add this for styling
 import Home from './pages/Home';
-import Services from './pages/Services';
+import Services from './pages/ServicesPage';
 import Gallery from './pages/Gallery';
 import AboutEnlight from './pages/AboutEnlight';
 import ContactPage from './pages/ContactPage';
@@ -19,6 +19,7 @@ import CTEVTAffiliatedShortCoursePage from './pages/CTEVTAffiliatedShortCoursePa
 import CaregiverTrainingPage from './pages/CaregiverTrainingPage';
 import FellowshipRegionalAnesthesiaPage from './pages/ellowshipRegionalAnesthesiaPage';
 import FellowshipLaparoscopicTrainingPage from './pages/FellowshipLaparoscopicTrainingPage';
+import ServicesPage from './pages/ServicesPage';
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/our-services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<AboutEnlight />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/aha-non-aha-bls-acls" element={<ACLSBLSPage />} />
         <Route path="/critical-care-nursing" element={<CriticalCareNursingPage />} />
