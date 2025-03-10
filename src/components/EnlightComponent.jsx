@@ -16,7 +16,7 @@ const EnlightComponent = () => {
     const elements = document.querySelectorAll(".animate-on-scroll");
 
     elements.forEach((el) => {
-      el.classList.add("opacity-100"); // Ensure visibility on first load
+      el.classList.add("opacity-100");
 
       const observer = new IntersectionObserver(
         ([entry]) => {
@@ -40,25 +40,25 @@ const EnlightComponent = () => {
         }
         .swiper-slide img {
           width: 100%;
-          height: 75vh; /* Adjusted for visibility */
+          height: 75vh;
           object-fit: cover;
+          display: block;
+          background-color: #f3f3f3;
         }
         @media (max-width: 768px) {
           .swiper-slide img {
-            height: 50vh; /* Adjusted height for mobile */
+            height: 50vh;
           }
         }
         .text-container {
           padding: 40px 20px;
           text-align: center;
-          opacity: 100; /* Ensure visibility */
         }
         .description-container {
           padding: 20px;
           text-align: center;
-          margin-top: 20px; /* Ensuring proper spacing */
+          margin-top: 20px;
         }
-        /* Animation Fix */
         .opacity-100 {
           opacity: 1;
           transition: opacity 1s ease-in-out;
@@ -68,19 +68,27 @@ const EnlightComponent = () => {
           transform: translateY(0) !important;
           transition: all 1s ease-in-out;
         }
+        .preload-image {
+          display: none;
+        }
       `}</style>
 
+      {/* Preload Images */}
+      <div className="preload-image">
+        <img src={enlight1} alt="preload" />
+        <img src={enlight2} alt="preload" />
+        <img src={enlight3} alt="preload" />
+        <img src={enlight4} alt="preload" />
+        <img src={enlight5} alt="preload" />
+      </div>
+
       <div className="bg-[#018749] text-white py-6">
-        {/* Hero Section */}
         <div className="text-container text-center px-4 md:px-12 lg:px-24 animate-on-scroll">
-          
-          {/* Welcome Heading */}
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             WELCOME TO ENLIGHT ACADEMY
           </h1>
 
-          {/* Swiper Full-Screen Slider */}
-          <div className="swiper-container mx-auto ">
+          <div className="swiper-container mx-auto">
             <Swiper
               spaceBetween={0}
               slidesPerView={1}
@@ -88,19 +96,23 @@ const EnlightComponent = () => {
               pagination={{ clickable: true }}
               modules={[Autoplay, Pagination]}
               className="w-full"
+              preloadImages={true}
+              watchSlidesProgress={true}
+              observer={true}
+              observeParents={true}
+              updateOnWindowResize={true}
             >
-              <SwiperSlide><img src={enlight1} alt="Slide 1" /></SwiperSlide>
-              <SwiperSlide><img src={enlight2} alt="Slide 2" /></SwiperSlide>
-              <SwiperSlide><img src={enlight3} alt="Slide 3" /></SwiperSlide>
-              <SwiperSlide><img src={enlight4} alt="Slide 4" /></SwiperSlide>
-              <SwiperSlide><img src={enlight5} alt="Slide 5" /></SwiperSlide>
+              <SwiperSlide><img src={enlight1} alt="Slide 1" loading="eager" /></SwiperSlide>
+              <SwiperSlide><img src={enlight2} alt="Slide 2" loading="eager" /></SwiperSlide>
+              <SwiperSlide><img src={enlight3} alt="Slide 3" loading="eager" /></SwiperSlide>
+              <SwiperSlide><img src={enlight4} alt="Slide 4" loading="eager" /></SwiperSlide>
+              <SwiperSlide><img src={enlight5} alt="Slide 5" loading="eager" /></SwiperSlide>
             </Swiper>
           </div>
 
-          {/* Fixed: Description Below Slider */}
           <div className="description-container animate-on-scroll">
             <p className="text-sm md:text-lg text-gray-200 max-w-xl mx-auto">
-              Enlight Academy specializes in ICU training programs for PCL, BNS, and BSc nurses, 
+              Enlight Academy specializes in ICU training programs for PCL, BNS, and BSc nurses,
               equipping them with the necessary skills and knowledge to excel in critical care settings.
             </p>
           </div>

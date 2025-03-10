@@ -36,7 +36,7 @@ const services = [
 
 const Services = () => {
   const navigate = useNavigate();
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -53,6 +53,13 @@ const Services = () => {
         Our Specialized Training Programs
       </motion.h2>
 
+      {/* Preload Images */}
+      <div className="hidden">
+        {services.map((service, index) => (
+          <img key={index} src={service.image} alt="preload" loading="eager" />
+        ))}
+      </div>
+
       {[0, 1].map(row => (
         <div key={row} className="mb-8">
           <Swiper
@@ -65,31 +72,30 @@ const Services = () => {
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             modules={[Autoplay]}
             className="mySwiper"
+            preloadImages={true}
+            observer={true}
+            observeParents={true}
+            updateOnWindowResize={true}
           >
             {services.slice(row * 6, (row + 1) * 6).map((service, index) => (
               <SwiperSlide key={index}>
                 <motion.div
-                  className="relative group bg-white shadow-md rounded-lg overflow-hidden transition-all duration-300 hover:shadow-lg"
+                  className="relative group bg-white shadow-md rounded-lg overflow-hidden transition-all duration-500 hover:shadow-lg"
                   whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  {/* ✅ Smaller Image Container (h-52 → h-40) */}
-                  <motion.div
+                  <div
                     className="relative w-full h-40 bg-cover bg-center"
                     style={{ backgroundImage: `url(${service.image})` }}
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.4 }}
                   >
                     <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-40 group-hover:opacity-60 transition-opacity duration-300"></div>
-                  </motion.div>
-
-                  {/* ✅ Reduced padding in text content (p-6 → p-4) */}
+                  </div>
                   <div className="p-4 text-center">
                     <h3 className="text-md md:text-lg font-semibold text-gray-800 group-hover:text-[#038A58] transition-colors duration-300">
                       {service.title}
                     </h3>
-
-                    {/* ✅ Smaller button (px-4 → px-3, py-2.5 → py-2) */}
                     <motion.button
                       className="mt-3 px-3 py-2 bg-green-600 text-white text-sm font-semibold rounded-full shadow-md transition-all duration-300 group-hover:shadow-lg"
                       onClick={() => navigate(service.link)}
