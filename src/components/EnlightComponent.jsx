@@ -38,12 +38,20 @@ const EnlightComponent = () => {
           width: 100%;
           min-height: auto;
         }
+        .swiper-slide picture,
         .swiper-slide img {
+          display: block;
           width: 100%;
           height: 75vh;
           object-fit: cover;
-          display: block;
           background-color: #f3f3f3;
+          image-rendering: auto;
+          image-rendering: crisp-edges;
+          image-rendering: high-quality;
+          transition: opacity 0.5s ease-in-out;
+        }
+        .swiper-slide img[loading="eager"] {
+          opacity: 1;
         }
         @media (max-width: 768px) {
           .swiper-slide img {
@@ -75,11 +83,11 @@ const EnlightComponent = () => {
 
       {/* Preload Images */}
       <div className="preload-image">
-        <img src={enlight1} alt="preload" />
-        <img src={enlight2} alt="preload" />
-        <img src={enlight3} alt="preload" />
-        <img src={enlight4} alt="preload" />
-        <img src={enlight5} alt="preload" />
+        <img src={enlight1} alt="preload" fetchpriority="high" loading="eager" />
+        <img src={enlight2} alt="preload" fetchpriority="high" loading="eager" />
+        <img src={enlight3} alt="preload" fetchpriority="high" loading="eager" />
+        <img src={enlight4} alt="preload" fetchpriority="high" loading="eager" />
+        <img src={enlight5} alt="preload" fetchpriority="high" loading="eager" />
       </div>
 
       <div className="bg-[#018749] text-white py-6">
@@ -97,16 +105,25 @@ const EnlightComponent = () => {
               modules={[Autoplay, Pagination]}
               className="w-full"
               preloadImages={true}
-              watchSlidesProgress={true}
               observer={true}
               observeParents={true}
               updateOnWindowResize={true}
             >
-              <SwiperSlide><img src={enlight1} alt="Slide 1" loading="eager" /></SwiperSlide>
-              <SwiperSlide><img src={enlight2} alt="Slide 2" loading="eager" /></SwiperSlide>
-              <SwiperSlide><img src={enlight3} alt="Slide 3" loading="eager" /></SwiperSlide>
-              <SwiperSlide><img src={enlight4} alt="Slide 4" loading="eager" /></SwiperSlide>
-              <SwiperSlide><img src={enlight5} alt="Slide 5" loading="eager" /></SwiperSlide>
+              <SwiperSlide>
+                <picture><img src={enlight1} alt="Slide 1" loading="eager" fetchpriority="high" /></picture>
+              </SwiperSlide>
+              <SwiperSlide>
+                <picture><img src={enlight2} alt="Slide 2" loading="eager" fetchpriority="high" /></picture>
+              </SwiperSlide>
+              <SwiperSlide>
+                <picture><img src={enlight3} alt="Slide 3" loading="eager" fetchpriority="high" /></picture>
+              </SwiperSlide>
+              <SwiperSlide>
+                <picture><img src={enlight4} alt="Slide 4" loading="eager" fetchpriority="high" /></picture>
+              </SwiperSlide>
+              <SwiperSlide>
+                <picture><img src={enlight5} alt="Slide 5" loading="eager" fetchpriority="high" /></picture>
+              </SwiperSlide>
             </Swiper>
           </div>
 
