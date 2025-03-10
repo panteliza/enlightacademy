@@ -8,6 +8,7 @@ import FAQ from "../components/FAQ";
 import DirectContactUs from "../components/DirectContact";
 import WhyChooseUs from "../components/Why";
 import Services from "../components/Services";
+import TrainingTeam from "../components/TrainingTeam";
 
 
 
@@ -27,6 +28,7 @@ const Home = () => {
       </div>
       <div className="w-full flex-shrink-0 overflow-hidden">
       <EnlightComponent/>
+      <TrainingTeam/>
       <Services/>
       <WhyChooseUs/>
     <StudentReviews/>

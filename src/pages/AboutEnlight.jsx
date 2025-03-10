@@ -3,6 +3,7 @@ import EnlightImage from "../assets/e.jpeg"; // Ensure this path is correct
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Reviews from "../components/Reviews";
+import TrainingTeam from "../components/TrainingTeam";
 
 const AboutEnlight = () => {
   useEffect(() => {
@@ -49,6 +50,7 @@ const AboutEnlight = () => {
           </div>
         </div>
       </div>
+      <TrainingTeam/>
       <Reviews />
       <Footer />
       <style>{`

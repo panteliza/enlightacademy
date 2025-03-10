@@ -10,7 +10,7 @@ const DirectContactUs = () => {
     const data = Object.fromEntries(formData.entries());
 
     // Gmail URL (Tries to open Gmail App)
-    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=elizapant55@gmail.com&su=Direct Contact Request&body=
+    const gmailLink = `https://mail.google.com/mail/?view=cm&fs=1&to=enlightskill2073@gmail.com&su=Direct Contact Request&body=
       Name: ${encodeURIComponent(data.name)}
       %0AEmail: ${encodeURIComponent(data.email)}
       %0APhone: ${encodeURIComponent(data.phone)}
@@ -18,7 +18,7 @@ const DirectContactUs = () => {
       %0ACourse: ${encodeURIComponent(data.course)}`;
 
     // Mailto fallback (Opens default email client)
-    const mailtoLink = `mailto:elizapant55@gmail.com?subject=Direct Contact Request&body=
+    const mailtoLink = `mailto:enlightskill2073@gmail.com?subject=Direct Contact Request&body=
       Name: ${encodeURIComponent(data.name)}
       %0AEmail: ${encodeURIComponent(data.email)}
       %0APhone: ${encodeURIComponent(data.phone)}
